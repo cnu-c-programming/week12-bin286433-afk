@@ -11,7 +11,7 @@ int main(int argc, const char* argv[]){
     int counts[26] = {0};
     int ch;
 
-    while((ch=fgets(fp))!=EOF){
+    while((ch=fgetc(fp))!=EOF){
         if(ch>='a'&& ch<='z'){
             counts[ch-'a']++;
         }
