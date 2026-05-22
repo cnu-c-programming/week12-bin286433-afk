@@ -32,6 +32,8 @@ void config_parser(Config* config_ptr){
             config_ptr->Address = strtoull(addr_str, NULL, 0);
         }
     }
+
+    fclose(fp);
     // fscanf(fp, "Options=%d\n", &config_ptr->Options);
     // fscanf(fp, "InputFileName=%s\n", config_ptr->InputFileName);
     // fscanf(fp, "SectionName=%s\n", config_ptr->SectionName);
@@ -51,18 +53,3 @@ int main(int argc, const char* argv[]){
         config.Address);
     return 0;    
 }
-
-}
-
-int main(int argc, const char* argv[]){
-    Config config;
-    config_parser(&config);
-
-    printf("config: %s %d %s %llu\n",
-        config.InputFileName,
-        config.Options,
-        config.SectionName,
-        config.Address);
-    return 0;    
-}
-
