@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, const char* argv[]){
-    const char* filename = "number.txt";
+    const char* filename = "numbers.txt";
 
     FILE* fp = fopen(filename, "r");
     
